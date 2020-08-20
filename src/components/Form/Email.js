@@ -1,13 +1,13 @@
 import React from "react"
 import { TextfieldDefault as EmailField } from "../lib/Textfield"
-import { TextDefault as EmailLabel } from "../lib/Text"
 import { isEmail, isEmpty } from "./helpers/validation"
+import withLabel from "./withLabel";
 
 
 class Email extends React.Component {
 
     static placeholder = "You@example.com";
-    static label = "Email";
+    static labelText = "Email";
     static InvalidatedEmailMessage = "You've entered a wrong email syntax"
 
     constructor(props) {
@@ -65,9 +65,6 @@ class Email extends React.Component {
     render() {
         const { style, hasError } = this.state
         return (<div>
-            <EmailLabel
-                content={Email.label}
-                classes="font-semibold text-sm" />
             <EmailField
                 type="email"
                 placeholder={Email.placeholder}
@@ -83,4 +80,4 @@ class Email extends React.Component {
     }
 }
 
-export default Email
+export default withLabel(Email)
