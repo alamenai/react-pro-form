@@ -1,13 +1,13 @@
 import React from "react"
 import { TextfieldDefault as UsernameField } from "../lib/Textfield"
-import { TextDefault as UsernameLabel } from "../lib/Text"
 import { username, isEmpty } from "./helpers/validation"
+import withLabel from "./withLabel";
 
 
 class Username extends React.Component {
 
     static placeholder = "Menai Ala Eddine"
-    static label = "Username"
+    static labelText = "Username"
 
     constructor(props) {
         super(props)
@@ -73,10 +73,7 @@ class Username extends React.Component {
 
         const { style, hasError, InvalidatedUsernameMessage } = this.state
         return (
-            <div className="mt-3">
-                <UsernameLabel
-                    content={Username.label}
-                    classes="font-semibold text-sm" />
+            <div>
                 <UsernameField
                     type="text"
                     value={this.props.input}
@@ -93,4 +90,4 @@ class Username extends React.Component {
     }
 }
 
-export default Username
+export default withLabel(Username)
