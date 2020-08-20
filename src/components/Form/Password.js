@@ -1,14 +1,14 @@
 import React from "react"
 import { TextfieldDefault as PasswordField } from "../lib/Textfield"
-import { TextDefault as PasswordLabel } from "../lib/Text"
 import { TextDefault as PasswordHint } from "../lib/Text"
 import { isPassword, isEmpty } from "./helpers/validation"
+import withLabel from "./withLabel";
 
 
 class Password extends React.Component {
 
     static placeholder = "••••••••••"
-    static label = "Password"
+    static labelText = "Password"
     static hint = "Make sure it's at least 8 characters."
     static InvalidatedPasswordMessage = "Password is too short"
 
@@ -69,10 +69,7 @@ class Password extends React.Component {
     render() {
 
         const { style, hasError } = this.state
-        return <div className="mt-3">
-            <PasswordLabel
-                content={Password.label}
-                classes="font-semibold text-sm" />
+        return <div>
             <PasswordField
                 type="password"
                 placeholder={Password.placeholder}
@@ -87,4 +84,4 @@ class Password extends React.Component {
     }
 }
 
-export default Password
+export default withLabel(Password)
