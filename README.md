@@ -1,12 +1,16 @@
-# Chat List Filtering
-> Built a Chat List component with React and Tailwindcss and implemented filtering feature with Context API and Redux.
+# Pro Form
+> Sign up form built on top of accessibility and usability rules.
+# Demo
+<video src="/demo/demo.mp4">
+
+</video>
 
 ## Features
 
 * Well-structured directories and modules.
 * Modular and readable code.
-* Nice user interface.
-* You can use it as a starter boilerplate for your Chat Application.
+* Modern user interface.
+* Inline validation.
 
 ## Available Scripts
 
@@ -24,5 +28,4 @@ It correctly bundles React in production mode and optimizes the build for the be
 
 The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
-
 
