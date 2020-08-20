@@ -7,11 +7,6 @@ const value = "Sign up for Gitbank"
 
 class SignUp extends React.Component {
 
-    constructor(props) {
-        super(props)
-
-    }
-
     render() {
         return (<disabledContext.Consumer >{
             ({ disabled }) => (<SignUpButton
