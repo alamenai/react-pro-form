@@ -5,6 +5,10 @@
 
 </video>
 
+[Live demo](https://t7d56.csb.app/)
+
+[The project hosted on codesandbox](https://codesandbox.io/s/funny-wood-t7d56)
+
 ## Features
 
 * Well-structured directories and modules.
