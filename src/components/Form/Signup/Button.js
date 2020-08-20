@@ -2,8 +2,6 @@ import React from "react"
 import { ButtonBrand as SignUpButton } from "../../lib/Button"
 import { disabledContext } from "./index"
 
-
-
 class SignUp extends React.Component {
 
     static type = "submit"
