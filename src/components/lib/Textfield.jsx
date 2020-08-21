@@ -1,9 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Textfield = ({ type, placeholder, classes, value, onChange, onBlur }) => {
+const Textfield = ({ id, type, placeholder, classes, value, onChange, onBlur }) => {
 
     return <input
+        id={id}
         className={classes}
         type={type}
         value={value}
