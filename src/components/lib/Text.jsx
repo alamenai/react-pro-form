@@ -1,7 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Text = ({ htmlFor, content, classes }) => {
+const Text = ({
+    htmlFor,
+    content,
+    classes }) => {
     return <label htmlFor={htmlFor} className={classes}>{content}</label>
 }
 

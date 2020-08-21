@@ -1,7 +1,12 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Button = ({ type, value, onSubmit, classes, disabled }) => {
+const Button = ({
+    type,
+    value,
+    onSubmit,
+    classes,
+    disabled }) => {
     return <input
         className={(disabled ? `opacity-50 ` : `opacity-100 `) + classes}
         type={type}
