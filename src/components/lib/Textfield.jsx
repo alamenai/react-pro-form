@@ -22,7 +22,8 @@ const TextfieldDefault = (props) => {
 Textfield.propTypes = {
     type: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    event: PropTypes.func.isRequired,
+    onChange: PropTypes.func.isRequired,
+    onBlur: PropTypes.func,
     classes: PropTypes.string
 
 }
