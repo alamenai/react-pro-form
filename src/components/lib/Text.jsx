@@ -7,12 +7,7 @@ const Text = ({ htmlFor, content, classes }) => {
 
 const TextDefault = (props) => {
     let defaultClasses = "tracking-wide font-helvatica text-gray-800"
-    return renderText(props, defaultClasses)
-}
-
-const renderText = (props, defaultClasses) => {
-    const { classes } = props
-    return <Text {...props} classes={defaultClasses + " " + classes} />
+    return <Text {...props} classes={defaultClasses + " " + props.classes} />
 }
 
 Text.propTypes = {
@@ -20,7 +15,5 @@ Text.propTypes = {
     classes: PropTypes.string
 
 }
-
-
 
 export { TextDefault }
