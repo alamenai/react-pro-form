@@ -67,6 +67,7 @@ class Email extends React.Component {
         const { input } = this.props
         return (<div>
             <EmailField
+                id="email"
                 type="email"
                 placeholder={Email.placeholder}
                 value={input}

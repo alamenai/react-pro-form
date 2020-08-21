@@ -75,6 +75,7 @@ class Username extends React.Component {
         return (
             <div>
                 <UsernameField
+                    id="username"
                     type="text"
                     value={this.props.input}
                     placeholder={Username.placeholder}

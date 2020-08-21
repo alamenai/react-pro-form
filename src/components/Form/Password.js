@@ -80,6 +80,7 @@ class Password extends React.Component {
         const { style, hasError } = this.state
         return <div>
             <PasswordField
+                id="password"
                 type="password"
                 placeholder={Password.placeholder}
                 value={this.props.input}
