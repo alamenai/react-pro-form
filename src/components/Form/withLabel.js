@@ -7,6 +7,7 @@ const withLabel = Field => {
         render() {
             return <div className="mt-3">
                 <Label
+                    htmlFor={Field.labelText.toLowerCase()}
                     content={Field.labelText}
                     classes="font-semibold text-sm" />
                 <Field {...this.props} />
