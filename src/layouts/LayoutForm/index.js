@@ -1,2 +1,2 @@
-import LayoutForm from "./layout"
+import LayoutForm from "./Layout"
 export default LayoutForm
