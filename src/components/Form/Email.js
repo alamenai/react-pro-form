@@ -64,11 +64,12 @@ class Email extends React.Component {
 
     render() {
         const { style, hasError } = this.state
+        const { input } = this.props
         return (<div>
             <EmailField
                 type="email"
                 placeholder={Email.placeholder}
-                value={this.props.input}
+                value={input}
                 classes={`mt-1 mb-1 ` + style}
                 onChange={this.onChange}
                 onBlur={this.onBlur} />
