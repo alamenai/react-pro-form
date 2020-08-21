@@ -1,8 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Text = ({ content, classes }) => {
-    return <p className={classes}>{content}</p>
+const Text = ({ htmlFor, content, classes }) => {
+    return <label htmlFor={htmlFor} className={classes}>{content}</label>
 }
 
 const TextDefault = (props) => {
