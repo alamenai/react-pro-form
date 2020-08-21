@@ -1,34 +1,42 @@
-import React from "react"
+import React, { Fragment } from "react"
 import { TextfieldDefault as PasswordField } from "../lib/Textfield"
 import { TextDefault as PasswordHint } from "../lib/Text"
+import { TextDefault as PasswordError } from "../lib/Text"
 import { isPassword, isEmpty } from "./helpers/validation"
-import withLabel from "./withLabel";
+import withLabel from "./withLabel"
 
 
 class Password extends React.Component {
 
     static placeholder = "••••••••••"
     static labelText = "Password"
-    static hint = "Make sure it's at least 8 characters."
-    static InvalidatedPasswordMessage = "Password is too short"
+
 
     constructor(props) {
         super(props)
         this.state = {
             style: "",
-            hasError: false
+            hasError: false,
+            isSatisified: false,
+            invalidatedPasswordMessage: "",
+            hint: {
+                text: "Make sure it's at least",
+                requirement: "8 characters."
+            }
         }
     }
-
 
     onChange = (e) => {
         const text = e.target.value;
         this.props.onType("password", text)
         const { onDefault, onSuccess } = this.onChangeStyle
         if (isPassword(text)) {
+            this.setState({ isSatisified: true })
             onSuccess()
             return
         }
+
+        this.setState({ isSatisified: false })
         onDefault()
     }
 
@@ -62,6 +70,7 @@ class Password extends React.Component {
         }
         if (!isPassword(text)) {
             onError()
+            this.setState({ invalidatedPasswordMessage: "This password is too short" })
         }
     }
 
@@ -77,9 +86,21 @@ class Password extends React.Component {
                 classes={`mt-1 mb-1 ` + style}
                 onChange={this.onChange}
                 onBlur={this.onBlur} />
-            <PasswordHint
-                content={hasError ? Password.InvalidatedPasswordMessage : Password.hint}
-                classes={hasError ? `text-red-500 bg-red-100 text-xs` : `text-xs`} />
+
+            <div className="flex">
+                {(!hasError &&
+                    <Fragment>
+                        <PasswordHint
+                            content={this.state.hint.text}
+                            classes={`text-xs`} />
+                        <PasswordHint
+                            content={this.state.hint.requirement}
+                            classes={(this.state.isSatisified ? `text-green-500` : `text-gray-900`) + ` text-xs font-bold ml-1`} />
+                    </Fragment>) ||
+                    <PasswordError
+                        content={this.state.invalidatedPasswordMessage}
+                        classes={`text-red-500 bg-red-100 text-xs`} />}
+            </div>
         </div>
     }
 }
