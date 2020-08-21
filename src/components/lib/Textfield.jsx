@@ -13,14 +13,10 @@ const Textfield = ({ type, placeholder, classes, value, onChange, onBlur }) => {
 }
 
 const TextfieldDefault = (props) => {
-    let mobileClasses = " xs:h-10 sm:h-10"
+    let mobileClasses = "xs:h-10 sm:h-10"
     let defaultClasses = "w-full bg-white border outline-none h-12 font-helvetica text-base rounded-sm tracking-wider px-4 py-2 focus:shadow-outline-sm"
-    return renderTextfield(props, (defaultClasses + mobileClasses))
-}
-
-const renderTextfield = (props, defaultClasses) => {
-    const { classes } = props
-    return <Textfield {...props} classes={defaultClasses + " " + classes} />
+    let allClasses = mobileClasses.concat(" " + defaultClasses)
+    return <Textfield {...props} classes={allClasses} />
 }
 
 Textfield.propTypes = {
