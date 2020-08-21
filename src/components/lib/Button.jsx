@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 
-const Button = ({ type, value, onChange, classes, disabled }) => {
+const Button = ({ type, value, onSubmit, classes, disabled }) => {
     return <input
         className={(disabled ? `opacity-50 ` : `opacity-100 `) + classes}
         type={type}
         value={value}
         disabled={disabled}
-        onChange={onChange} />
+        onSubmit={onSubmit} />
 }
 
 const ButtonBrand = (props) => {
@@ -24,7 +24,7 @@ const ButtonBrand = (props) => {
 Button.propTypes = {
     type: PropTypes.string.isRequired,
     value: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
+    onSubmit: PropTypes.func,
     classes: PropTypes.string
 
 }
