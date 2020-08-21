@@ -18,14 +18,15 @@ class Form extends React.Component {
         }
     }
 
-    onType = (field, input) => { this.setState({ [field]: input }) }
+    onType = (field, input) => this.setState({ [field]: input })
 
     render() {
+        const { email, fullname, password } = this.state
         return <FormLayout>
             <disabledContext.Provider value={{ disabled: !isValidatedForm(this.state) }}>
-                <EmailField input={this.state.email} onType={this.onType} />
-                <UsernameField input={this.state.fullname} onType={this.onType} />
-                <PasswordField input={this.state.password} onType={this.onType} />
+                <EmailField input={email} onType={this.onType} />
+                <UsernameField input={fullname} onType={this.onType} />
+                <PasswordField input={password} onType={this.onType} />
                 <SignUpButton />
             </disabledContext.Provider>
         </FormLayout>
