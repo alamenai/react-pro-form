@@ -15,7 +15,7 @@ const Textfield = ({ type, placeholder, classes, value, onChange, onBlur }) => {
 const TextfieldDefault = (props) => {
     let mobileClasses = "xs:h-10 sm:h-10"
     let defaultClasses = "w-full bg-white border outline-none h-12 font-helvetica text-base rounded-sm tracking-wider px-4 py-2 focus:shadow-outline-sm"
-    let allClasses = mobileClasses.concat(" " + defaultClasses)
+    let allClasses = mobileClasses.concat(" " + defaultClasses + " " + props.classes)
     return <Textfield {...props} classes={allClasses} />
 }
 
