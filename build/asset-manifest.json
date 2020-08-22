@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/react-pro-form/static/css/main.29de0ad9.chunk.css",
+    "main.js": "/react-pro-form/static/js/main.065ed95f.chunk.js",
+    "main.js.map": "/react-pro-form/static/js/main.065ed95f.chunk.js.map",
+    "runtime-main.js": "/react-pro-form/static/js/runtime-main.894864bf.js",
+    "runtime-main.js.map": "/react-pro-form/static/js/runtime-main.894864bf.js.map",
+    "static/js/2.f158d119.chunk.js": "/react-pro-form/static/js/2.f158d119.chunk.js",
+    "static/js/2.f158d119.chunk.js.map": "/react-pro-form/static/js/2.f158d119.chunk.js.map",
+    "index.html": "/react-pro-form/index.html",
+    "precache-manifest.b70be6d8b68d76dec18ab979f6fb6edc.js": "/react-pro-form/precache-manifest.b70be6d8b68d76dec18ab979f6fb6edc.js",
+    "service-worker.js": "/react-pro-form/service-worker.js",
+    "static/css/main.29de0ad9.chunk.css.map": "/react-pro-form/static/css/main.29de0ad9.chunk.css.map",
+    "static/js/2.f158d119.chunk.js.LICENSE.txt": "/react-pro-form/static/js/2.f158d119.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.894864bf.js",
+    "static/js/2.f158d119.chunk.js",
+    "static/css/main.29de0ad9.chunk.css",
+    "static/js/main.065ed95f.chunk.js"
+  ]
+}
