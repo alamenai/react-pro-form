@@ -1,5 +1,5 @@
 <p align="center">
-<img src="https://github.com/MenaiAla/react-pro-form/blob/master/icon.png"/>
+<img src="https://github.com/MenaiAla/react-pro-form/blob/master/logo.png"/>
 <h3 align="center">React Pro Form</h3>
 </p> 
 <h5 align="center"> Proffesional sign up form built on top of accessibility and usability rules.</h5>
