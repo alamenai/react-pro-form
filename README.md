@@ -6,9 +6,9 @@
 
 ## Demo
 
-[Live App](https://t7d56.csb.app/)
+[Live App](https://xux06.csb.app/)
 
-[On Codesandbox](https://codesandbox.io/s/funny-wood-t7d56)
+[On Codesandbox](https://codesandbox.io/s/menaialareact-pro-form-xux06)
 
 ## Features
 
