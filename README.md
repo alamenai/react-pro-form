@@ -2,7 +2,7 @@
 <img src="https://github.com/MenaiAla/react-pro-form/blob/master/logo.png"/>
 <h3 align="center">React Pro Form</h3>
 </p> 
-<h5 align="center"> Proffesional sign up form built on top of accessibility and usability rules.</h5>
+<h5 align="center">Professional sign-up form with modern design and built-in validation.</h5>
 
 ## Demo
 
