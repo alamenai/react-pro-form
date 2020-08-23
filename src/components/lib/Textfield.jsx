@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useRef } from "react"
 import PropTypes from "prop-types"
 
 const Textfield = ({
@@ -8,9 +8,15 @@ const Textfield = ({
     classes,
     value,
     onChange,
-    onBlur }) => {
+    onBlur, isFocused }) => {
+
+    const input = useRef("input")
+    useEffect(() => {
+        isFocused && input.current.focus()
+    }, [input])
 
     return <input
+        ref={input}
         id={id}
         className={classes}
         type={type}
