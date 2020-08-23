@@ -73,7 +73,8 @@ class Email extends React.Component {
                 value={input}
                 classes={`mt-1 mb-1 ` + style}
                 onChange={this.onChange}
-                onBlur={this.onBlur} />
+                onBlur={this.onBlur}
+                isFocused={true} />
             {
                 hasError && <p className="text-xs text-red-500 font-helvetica bg-red-100">{Email.InvalidatedEmailMessage}</p>
             }
